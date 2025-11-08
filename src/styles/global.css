@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d5016;
+}
+
+/* Section */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline {
+  height: 3px;
+  width: 60px;
+  background-color: #2d5016;
+  margin-top: 10px;
+}
+
+/* Button */
+.btn {
+  background-color: transparent;
+  color: #2d5016;
+  border: 1px solid #2d5016;
+  padding: 12px 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: #2d5016;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+}

@@ -1,0 +1,160 @@
+.blog-post-container {
+  min-height: 100vh;
+  background-color: #000000;
+  padding: 60px 20px;
+}
+
+.blog-post-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  color: #2d5016;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #3d6a1f;
+}
+
+.blog-article {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  padding: 60px;
+}
+
+.blog-header {
+  margin-bottom: 40px;
+}
+
+.blog-post-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: -0.02em;
+}
+
+.blog-meta {
+  margin-bottom: 20px;
+}
+
+.blog-date {
+  color: #2d5016;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.title-divider {
+  height: 2px;
+  width: 60px;
+  background-color: #2d5016;
+}
+
+.blog-body {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.blog-body h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.blog-body h2 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.blog-body h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.blog-body p {
+  margin-bottom: 20px;
+}
+
+.blog-body a {
+  color: #2d5016;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.blog-body a:hover {
+  color: #3d6a1f;
+}
+
+.blog-body ul,
+.blog-body ol {
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.blog-body li {
+  margin-bottom: 10px;
+}
+
+.blog-body code {
+  background-color: #1a1a1a;
+  color: #2d5016;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+}
+
+.blog-body pre {
+  background-color: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  padding: 20px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.blog-body pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #a0a0a0;
+}
+
+.blog-body blockquote {
+  border-left: 3px solid #2d5016;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #808080;
+}
+
+.blog-body img {
+  max-width: 100%;
+  height: auto;
+  margin: 30px 0;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .blog-article {
+    padding: 40px 30px;
+  }
+  
+  .blog-post-title {
+    font-size: 2rem;
+  }
+}
