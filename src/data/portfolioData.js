@@ -11,7 +11,6 @@ export const portfolioData = {
         url: "https://www.linkedin.com/in/witze-van-der-straeten-705731193/",
         image: "/images/linkedin.svg",
       },
-      // Voeg hier makkelijk nieuwe links toe
     ],
   },
   skills: [
@@ -53,31 +52,50 @@ export const portfolioData = {
   ],
   blogs: [
     {
-      id: 1,
-      slug: "nestle-skillathon-experience",
-      title: "Nestlé Skillathon Experience",
+      id: 4,
+      slug: "figma-to-drupal-sdc",
+      title: "Generating Drupal Components with Figma and AI",
       description:
-        "My experience at the Nestlé Skillathon event and the lessons I learned about innovation and collaboration.",
+        "How to automatically convert Figma components into working Drupal UI Patterns using Copilot and MCP.",
       date: "November 2025",
-      markdownFile: "nestle-skillathon-experience.md",
+      markdownFile: "figma-to-drupal-sdc.md",
     },
     {
-      id: 2,
-      slug: "drupalcon-vienna-2025",
-      title: "DrupalCon Vienna 2025 Highlights",
+      id: 5,
+      slug: "nestle-skillathon-day-1-reflection",
+      title: "Day 1: The Power of Marketing, Innovation & Entrepreneurship",
       description:
-        "A retrospective on my DrupalCon Vienna experience, where my work was featured during the keynote.",
-      date: "October 2025",
-      markdownFile: "drupalcon-vienna-2025.md",
+        "A reflection on building culture brands in an era where being heard meaningfully has never been harder.",
+      date: "November 2025",
+      markdownFile: "nestle-skillathon-day-1-reflection.md",
     },
     {
-      id: 3,
-      slug: "development-to-product-management",
-      title: "From Development to Product Management",
+      id: 6,
+      slug: "nestle-skillathon-day-2",
+      title: "Day 2: AI Won't Steal Your Job (But Someone Using AI Might)",
       description:
-        "My career path and how I'm making the transition from developer to product manager.",
-      date: "September 2025",
-      markdownFile: "development-to-product-management.md",
+        "Digital Innovation, Data Strategy, and Why Being Human Still Matters at Nestlé.",
+      date: "November 2025",
+      markdownFile: "nestle-skillathon-day-2.md",
+    },
+    {
+      id: 7,
+      slug: "nestle-skillathon-day-3",
+      title:
+        "Day 3: The Power of YOU (And Why Your Mental Health Matters More Than Your LinkedIn)",
+      description:
+        "Job market reality checks, LinkedIn mastery, and learning that it's okay to not be okay.",
+      date: "November 2025",
+      markdownFile: "nestle-skillathon-day-3.md",
+    },
+    {
+      id: 8,
+      slug: "nestle-skillathon-day-4",
+      title: "Day 4: Green Skills and Why Saving the Planet Is Actually a Job",
+      description:
+        "Climate change, regenerative agriculture, and why the best sustainability careers don't have 'sustainability' in the title.",
+      date: "November 2025",
+      markdownFile: "nestle-skillathon-day-4.md",
     },
   ],
 };

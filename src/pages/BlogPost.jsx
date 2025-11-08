@@ -39,26 +39,16 @@ const BlogPost = () => {
         .then((response) => response.text())
         .then((text) => {
           setContent(text);
-          // Parse headers (## en ###)
+          // Parse headers (# en ##)
           const lines = text.split("\n");
           let tocHeaders = [];
-          let headerCounts = {};
           lines.forEach((line, idx) => {
-            const match = line.match(/^(#{2,3})\s+(.*)/);
-            if (match) {
-              const level = match[1].length;
-              const raw = match[2].trim();
-              const baseId = raw
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/(^-|-$)/g, "");
-              headerCounts[baseId] = (headerCounts[baseId] || 0) + 1;
-              const id =
-                headerCounts[baseId] > 1
-                  ? `${baseId}-${headerCounts[baseId]}`
-                  : baseId;
-              tocHeaders.push({ level, text: raw, id });
-              headerIdMap.current[raw + idx] = id;
+            // Alleen regels die exact met '## ' beginnen (dus geen shell comments)
+            if (line.startsWith('## ')) {
+              const raw = line.slice(3).trim();
+              const id = slugify(raw + "-" + (idx + 1));
+              tocHeaders.push({ level: 2, text: raw, id, line: idx + 1 });
+              headerIdMap.current[raw + "-" + (idx + 1)] = id;
             }
           });
           setToc(tocHeaders);
@@ -83,8 +73,8 @@ const BlogPost = () => {
 
   // Geen custom renderers meer nodig, react-markdown-toc regelt id's
 
-  // Custom renderer: voeg unieke id's toe aan headers
-  let headerIndex = 0;
+  // Custom renderer: voeg unieke id's toe aan headersja
+
   function slugify(text) {
     return text
       .toString()
@@ -103,14 +93,14 @@ const BlogPost = () => {
   const renderers = {
     h2: ({ node, ...props }) => {
       const text = childrenToString(props.children);
-      const id = headerIdMap.current[text + headerIndex] || slugify(text);
-      headerIndex++;
+      const line = node && node.position && node.position.start && node.position.start.line;
+      const id = headerIdMap.current[text + "-" + line] || slugify(text + "-" + line);
       return <h2 id={id}>{props.children}</h2>;
     },
     h3: ({ node, ...props }) => {
       const text = childrenToString(props.children);
-      const id = headerIdMap.current[text + headerIndex] || slugify(text);
-      headerIndex++;
+      const line = node && node.position && node.position.start && node.position.start.line;
+      const id = headerIdMap.current[text + "-" + line] || slugify(text + "-" + line);
       return <h3 id={id}>{props.children}</h3>;
     },
   };
@@ -121,23 +111,25 @@ const BlogPost = () => {
         <aside className="blog-toc">
           <div className="toc-title">Inhoud</div>
           <ul>
-            {toc.map((h, idx) => (
-              <li key={h.id} className={h.level === 2 ? "toc-h2" : "toc-h3"}>
-                <a
-                  href={`#${h.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const el = document.getElementById(h.id);
-                    if (el) {
-                      el.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }
-                    window.history.pushState(null, "", `#${h.id}`);
-                  }}
-                >
-                  {h.text}
-                </a>
-              </li>
-            ))}
+            {toc
+              .filter(h => h.level === 1 || h.level === 2)
+              .map((h, idx) => (
+                <li key={h.id} className={h.level === 1 ? "toc-h1" : "toc-h2"}>
+                  <a
+                    href={`#${h.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById(h.id);
+                      if (el) {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }
+                      window.history.pushState(null, "", `#${h.id}`);
+                    }}
+                  >
+                    {h.text}
+                  </a>
+                </li>
+              ))}
           </ul>
         </aside>
       )}
