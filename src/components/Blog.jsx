@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Blog.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Blog.css";
 
 const Blog = ({ blogs }) => {
   return (
-    <section className="section">
+    <section className="section" id="blog">
       <h2 className="section-title">
         Blog
         <div className="title-underline"></div>
