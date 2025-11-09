@@ -22,10 +22,62 @@ function childrenToString(children) {
 }
 
 const BlogPost = () => {
-  // ...existing code (useParams, useState, useEffect, etc.)...
-  // Plaats hier de bestaande hooks en logica
+  const { slug } = useParams();
+  const [content, setContent] = useState("");
+  const [blog, setBlog] = useState(null);
+  const [toc, setToc] = useState([]);
+  const headerIdMap = useRef({});
 
-  // ...headerIdMap, toc, blog, content, renderers, etc...
+  useEffect(() => {
+    const blogData = portfolioData.blogs.find((b) => b.slug === slug);
+    setBlog(blogData);
+    if (blogData) {
+      fetch(`/blogs/${blogData.markdownFile}`)
+        .then((response) => response.text())
+        .then((text) => {
+          setContent(text);
+          // Parse headers (# en ##)
+          const lines = text.split("\n");
+          let tocHeaders = [];
+          lines.forEach((line, idx) => {
+            if (line.startsWith("## ")) {
+              const raw = line.slice(3).trim();
+              const id = slugify(raw + "-" + (idx + 1));
+              tocHeaders.push({ level: 2, text: raw, id, line: idx + 1 });
+              headerIdMap.current[raw + "-" + (idx + 1)] = id;
+            }
+          });
+          setToc(tocHeaders);
+        })
+        .catch((error) => console.error("Error loading blog:", error));
+    }
+    headerIdMap.current = {};
+  }, [slug]);
+
+  const renderers = {
+    h2: ({ node, ...props }) => {
+      const text = childrenToString(props.children);
+      const line =
+        node &&
+        node.position &&
+        node.position.start &&
+        node.position.start.line;
+      const id =
+        headerIdMap.current[text + "-" + line] || slugify(text + "-" + line);
+      return <h2 id={id}>{props.children}</h2>;
+    },
+    h3: ({ node, ...props }) => {
+      const text = childrenToString(props.children);
+      const line =
+        node &&
+        node.position &&
+        node.position.start &&
+        node.position.start.line;
+      const id =
+        headerIdMap.current[text + "-" + line] || slugify(text + "-" + line);
+      return <h3 id={id}>{props.children}</h3>;
+    },
+  };
 
   return (
     <div>

@@ -19,6 +19,8 @@ export const portfolioData = {
     { name: "CSS", image: "/icons/css.svg" },
     { name: "JavaScript", image: "/icons/js.svg" },
     { name: "Ai", image: "/icons/ai.svg" },
+    { name: "CraftCMS", image: "/icons/craft.svg" },
+    { name: "Laravel", image: "/icons/laravel.svg" },
   ],
   projects: [
     {
@@ -48,12 +50,12 @@ export const portfolioData = {
   ],
   blogs: [
     {
-      id: 4,
+      id: 9,
       slug: "figma-to-drupal-sdc",
       title: "Generating Drupal Components with Figma and AI",
       description:
         "How to automatically convert Figma components into working Drupal UI Patterns using Copilot and MCP.",
-      date: "November 2025",
+      date: "June 2025",
       markdownFile: "figma-to-drupal-sdc.md",
     },
     {
