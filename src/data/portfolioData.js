@@ -4,7 +4,7 @@ export const portfolioData = {
     title: "Web Developer & AI Innovator",
     image: "/images/hero-profile.png",
     description:
-      "Web Development & Interactive Media student at Arteveldehogeschool. Specializing in Drupal development and AI integrations. DrupalCon Vienna 2025 speaker with innovative Figma-to-Drupal workflow.",
+      "Web Development & Interactive Media student at Arteveldehogeschool. Specializing in Drupal development and AI integrations. Featured at DrupalCon Vienna 2025 DriesNote for innovative Figma-to-Drupal workflow.",
     links: [
       {
         name: "LinkedIn",
