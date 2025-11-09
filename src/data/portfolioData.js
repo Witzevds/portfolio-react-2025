@@ -2,7 +2,7 @@ export const portfolioData = {
   about: {
     name: "Witze",
     title: "Web Developer & AI Innovator",
-    image: "/images/hero-profile.png", // Nieuwe profielfoto
+    image: "/images/hero-profile.png",
     description:
       "Web Development & Interactive Media student at Arteveldehogeschool. Specializing in Drupal development and AI integrations. DrupalCon Vienna 2025 speaker with innovative Figma-to-Drupal workflow.",
     links: [
@@ -14,15 +14,11 @@ export const portfolioData = {
     ],
   },
   skills: [
-    { name: "Drupal", image: "https://via.placeholder.com/80x80?text=Drupal" },
-    { name: "React", image: "https://via.placeholder.com/80x80?text=React" },
-    { name: "PHP", image: "https://via.placeholder.com/80x80?text=PHP" },
-    { name: "CSS", image: "https://via.placeholder.com/80x80?text=CSS" },
-    { name: "JavaScript", image: "https://via.placeholder.com/80x80?text=JS" },
-    {
-      name: "AI Integration",
-      image: "https://via.placeholder.com/80x80?text=AI",
-    },
+    { name: "Drupal", image: "/icons/drupal.svg" },
+    { name: "React", image: "/icons/react.svg" },
+    { name: "CSS", image: "/icons/css.svg" },
+    { name: "JavaScript", image: "/icons/js.svg" },
+    { name: "Ai", image: "/icons/ai.svg" },
   ],
   projects: [
     {
@@ -67,7 +63,7 @@ export const portfolioData = {
       description:
         "A reflection on building culture brands in an era where being heard meaningfully has never been harder.",
       date: "November 2025",
-      markdownFile: "nestle-skillathon-day-1-reflection.md",
+      markdownFile: "nestle-skillathon-day-1.md",
     },
     {
       id: 6,
