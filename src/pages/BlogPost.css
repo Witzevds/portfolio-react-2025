@@ -206,12 +206,20 @@
   border-radius: 4px;
 }
 
-@media (max-width: 768px) {
-  .blog-article {
-    padding: 40px 30px;
-  }
 
+@media (max-width: 768px) {
+  html, body, .blog-post-container {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .blog-post-container {
+    padding: 30px 2vw;
+  }
+  .blog-article {
+    padding: 18px 4vw;
+    border-radius: 8px;
+  }
   .blog-post-title {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 }
