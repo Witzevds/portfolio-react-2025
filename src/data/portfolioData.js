@@ -25,10 +25,28 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Figma-to-Drupal AI Workflow",
-      image: "https://via.placeholder.com/400x250",
+      title: "CraftCMS Website for Sint-Coleta",
+      image: "/images/projects/sint-coleta/1.png",
       description:
-        "Innovative workflow for automatic conversion of Figma designs to Drupal components using AI.",
+        "A modern, modular website for a fictional organization, built with CraftCMS and a custom design system.",
+      longDescription:
+        "This project is a complete CraftCMS website featuring dynamic pages, custom content types, and a consistent visual style. I learned about CraftCMS templating, Twig, content modeling, responsive CSS, design tokens, and how to bridge design and development workflows.",
+      skills: [
+        "CraftCMS",
+        "Twig",
+        "Responsive CSS",
+        "Design tokens",
+        "Git",
+        "Database management",
+        "DDEV",
+      ],
+      images: [
+        "/images/projects/sint-coleta/2.png",
+        "/images/projects/sint-coleta/3.png",
+        "/images/projects/sint-coleta/4.png",
+        "/images/projects/sint-coleta/5.png",
+        "/images/projects/sint-coleta/6.png",
+      ],
       hasDetailPage: true,
     },
     {
@@ -37,7 +55,14 @@ export const portfolioData = {
       image: "https://via.placeholder.com/400x250",
       description:
         "Marketing strategy project for Design Museum Gent with focus on digital transformation.",
-      hasDetailPage: false,
+      longDescription:
+        "A marketing strategy project for Design Museum Gent, focusing on digital transformation and audience engagement. I learned about digital marketing, branding, and stakeholder management.",
+      skills: ["Digital marketing", "Branding", "Stakeholder management"],
+      images: [
+        "https://via.placeholder.com/800x400?text=DMG+1",
+        "https://via.placeholder.com/800x400?text=DMG+2",
+      ],
+      hasDetailPage: true,
     },
     {
       id: 3,
@@ -45,6 +70,13 @@ export const portfolioData = {
       image: "https://via.placeholder.com/400x250",
       description:
         "AI integration projects during internship at Calibrate with Drupal development.",
+      longDescription:
+        "During my internship at Calibrate, I worked on AI integration projects with Drupal. I learned about backend APIs, AI model integration, and teamwork in a professional environment.",
+      skills: ["AI integration", "Drupal", "APIs", "Teamwork"],
+      images: [
+        "https://via.placeholder.com/800x400?text=Calibrate+1",
+        "https://via.placeholder.com/800x400?text=Calibrate+2",
+      ],
       hasDetailPage: true,
     },
   ],

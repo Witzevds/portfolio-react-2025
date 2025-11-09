@@ -4,13 +4,19 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Blog from "../components/Blog";
 import { portfolioData } from "../data/portfolioData";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="app">
       <Hero data={portfolioData.about} />
       <Skills skills={portfolioData.skills} />
-      <Projects projects={portfolioData.projects} />
+  <Projects projects={portfolioData.projects.slice(0, 3)} />
+      <div style={{ textAlign: "center", marginTop: 32 }}>
+        <Link to="/projects" className="btn">
+          More Projects
+        </Link>
+      </div>
       <Blog blogs={portfolioData.blogs} />
       <div
         className="featured-video-section"

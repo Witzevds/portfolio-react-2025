@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Projects.css";
 
 const Projects = ({ projects }) => {
@@ -20,7 +21,9 @@ const Projects = ({ projects }) => {
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
               {project.hasDetailPage && (
-                <button className="btn">View Project →</button>
+                <Link to={`/project/${project.id}`} className="btn">
+                  View Project →
+                </Link>
               )}
             </div>
           </div>
