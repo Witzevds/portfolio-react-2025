@@ -20,20 +20,22 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-      <ul
-        className={`navbar-links${menuOpen ? " open" : ""}`}
-        onClick={() => setMenuOpen(false)}
-      >
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#projects">Projecten</a>
-        </li>
-        <li>
-          <a href="#blog">Blog</a>
-        </li>
-      </ul>
+      {!(location.pathname.startsWith("/project/") || location.pathname.startsWith("/blog/")) && (
+        <ul
+          className={`navbar-links${menuOpen ? " open" : ""}`}
+          onClick={() => setMenuOpen(false)}
+        >
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projecten</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+        </ul>
+      )}
     </nav>
   );
 };
