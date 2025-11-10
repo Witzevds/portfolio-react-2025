@@ -12,12 +12,18 @@ const Navbar = () => {
           <img src="/images/logo.svg" alt="Logo" className="logo-img" />
         </Link>
       </div>
-      <div className={`navbar-hamburger${menuOpen ? " open" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
+      <div
+        className={`navbar-hamburger${menuOpen ? " open" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul className={`navbar-links${menuOpen ? " open" : ""}`} onClick={() => setMenuOpen(false)}>
+      <ul
+        className={`navbar-links${menuOpen ? " open" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      >
         <li>
           <a href="#about">About</a>
         </li>
