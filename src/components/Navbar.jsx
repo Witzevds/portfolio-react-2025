@@ -20,7 +20,10 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-      {!(location.pathname.startsWith("/project/") || location.pathname.startsWith("/blog/")) && (
+      {!(
+        location.pathname.startsWith("/project/") ||
+        location.pathname.startsWith("/blog/")
+      ) && (
         <ul
           className={`navbar-links${menuOpen ? " open" : ""}`}
           onClick={() => setMenuOpen(false)}

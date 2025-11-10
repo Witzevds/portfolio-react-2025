@@ -84,7 +84,7 @@ const BlogPost = () => {
       <div className="blog-post-container">
         {toc && toc.length > 0 && (
           <aside className="blog-toc">
-            <div className="toc-title">Inhoud</div>
+            <div className="toc-title">Content</div>
             <ul>
               {toc
                 .filter((h) => h.level === 1 || h.level === 2)
