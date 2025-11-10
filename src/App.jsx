@@ -17,10 +17,9 @@ import "./styles/global.css";
 
 function AppContent() {
   const location = useLocation();
-  const isBlogDetail = location.pathname.startsWith("/blog/");
   return (
     <>
-      {!isBlogDetail && <Navbar />}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:slug" element={<BlogPost />} />

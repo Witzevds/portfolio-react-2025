@@ -11,7 +11,7 @@ const Home = () => {
     <div className="app">
       <Hero data={portfolioData.about} />
       <Skills skills={portfolioData.skills} />
-  <Projects projects={portfolioData.projects.slice(0, 3)} />
+      <Projects projects={portfolioData.projects.slice(0, 3)} />
       <div style={{ textAlign: "center", marginTop: 32 }}>
         <Link to="/projects" className="btn">
           More Projects
