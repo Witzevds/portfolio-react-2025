@@ -1,18 +1,22 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import Projects from "../components/Projects";
 import { portfolioData } from "../data/portfolioData";
-import { Link } from "react-router-dom";
+import useReveal from "../hooks/useReveal";
 
 const AllProjects = () => {
+  useReveal();
+
   return (
-    <div className="section">
-      <div style={{ marginBottom: 24 }}>
-        <Link to="/" className="back-link">
-          ← Back to home
-        </Link>
+    <div className="app">
+      <div className="section">
+        <div className="reveal" style={{ marginTop: 60, marginBottom: 24 }}>
+          <Link to="/" className="back-link">
+            ← Back to home
+          </Link>
+        </div>
+        <Projects projects={portfolioData.projects} />
       </div>
-      <Projects projects={portfolioData.projects} />
     </div>
   );
 };
