@@ -40,6 +40,25 @@ const Hero = ({ data }) => {
             >
               Get in touch
             </a>
+            <a
+              href="/witze-vanderstraeten-cv.pdf"
+              download
+              className="hero-cv-link"
+            >
+              <span className="hero-cv-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 4v14M5 13l7 7 7-7" />
+                </svg>
+              </span>
+              Download CV
+            </a>
           </div>
 
           {data.links && data.links.length > 0 && (

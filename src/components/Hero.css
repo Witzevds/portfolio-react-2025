@@ -123,8 +123,53 @@
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  align-items: center;
+  gap: 14px 18px;
   margin-top: 8px;
+}
+
+.hero-cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.3s, border-color 0.3s, gap 0.3s var(--ease-out);
+}
+
+.hero-cv-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  gap: 12px;
+}
+
+.hero-cv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: border-color 0.3s, transform 0.3s var(--ease-out);
+}
+
+.hero-cv-icon svg {
+  width: 11px;
+  height: 11px;
+  display: block;
+}
+
+.hero-cv-link:hover .hero-cv-icon {
+  border-color: var(--accent);
+  transform: translateY(2px);
 }
 
 .hero-links {
