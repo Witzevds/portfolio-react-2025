@@ -66,16 +66,9 @@ const Hero = ({ data }) => {
         </div>
 
         <div className="hero-right reveal">
-          <div className="hero-photo-frame">
-            <span className="hero-photo-marker tl">[ 01 / Witze ]</span>
-            <img src={data.image} alt={data.name} />
-            <span className="hero-photo-tag">Witze · Ghent</span>
-            <span className="hero-photo-marker br">Web × AI</span>
-          </div>
+          <img src={data.image} alt={data.name} className="hero-photo" />
         </div>
       </div>
-
-      <div className="hero-scroll-cue" aria-hidden="true">Scroll</div>
     </section>
   );
 };
