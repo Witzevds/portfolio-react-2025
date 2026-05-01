@@ -32,7 +32,12 @@ const Hero = ({ data }) => {
               View work
               <span aria-hidden="true">→</span>
             </a>
-            <a href="mailto:witzevds@gmail.com" className="btn-ghost">
+            <a
+              href="https://www.linkedin.com/in/witze-van-der-straeten-705731193/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost"
+            >
               Get in touch
             </a>
           </div>

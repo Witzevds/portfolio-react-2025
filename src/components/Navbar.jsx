@@ -60,7 +60,12 @@ const Navbar = () => {
           </li>
         )}
         <li>
-          <a href="mailto:witzevds@gmail.com" className="navbar-cta">
+          <a
+            href="https://www.linkedin.com/in/witze-van-der-straeten-705731193/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-cta"
+          >
             <span className="cta-dot" aria-hidden="true" />
             Get in touch
             <span className="cta-arrow" aria-hidden="true">

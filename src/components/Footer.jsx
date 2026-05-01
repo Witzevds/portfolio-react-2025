@@ -11,8 +11,13 @@ const Footer = () => {
           Got an idea<span className="accent">?</span>
           <br /> Let's make it real.
         </h2>
-        <a href="mailto:witzevds@gmail.com" className="footer-cta-link">
-          witzevds@gmail.com
+        <a
+          href="https://www.linkedin.com/in/witze-van-der-straeten-705731193/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-cta-link"
+        >
+          Reach out on LinkedIn
           <span aria-hidden="true">→</span>
         </a>
       </div>
